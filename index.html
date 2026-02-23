@@ -18,9 +18,9 @@
 
             <div class="left">
                 <div class="top">
-                    <lable for="image-input" class="btn">Choose image
+                    <label for="image-input" class="btn">Choose image
                         <input type="file" id="image-input" accept="image/*" hidden>
-                    </lable>
+                    </label>
                     <button class="btn" id="reset-btn">Reset</button>
                     <button class="btn" id="download-btn">Download</button>
                 </div>
@@ -30,6 +30,7 @@
                         <i class="ri-image-line"></i>
                         <p>No image chosen</p>
                     </div>
+                    <canvas id="image-canvas"></canvas>
                 </div>
             </div>
 
@@ -49,6 +50,9 @@
                     </div> -->
 
                 </div>
+
+                <h2>Presets</h2>
+                <div class="presets"></div>
             </div>
 
         </section>
