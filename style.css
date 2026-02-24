@@ -35,6 +35,14 @@ main section {
     cursor: pointer;
     color: var(--text-active-color);
 }
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
 
 main section .top {
     display: flex;
@@ -106,6 +114,7 @@ main section .right .filters {
     display: flex;
     flex-direction: column;
     gap: var(--gutter-md);
+    
 }
 
 main section .right .filter {
@@ -121,7 +130,7 @@ main section .right .filter input {
 }
 
 main section .right .filter input::-webkit-slider-runnable-track {
-    /* width: 100%; */
+    width: 100%;
     height: 3px;
     background-color: var(--bg-active-color);
     border-radius: 2px;
@@ -133,6 +142,114 @@ main section .right .filter input::-webkit-slider-thumb {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: red;
+    /* background-color: red; */
+    background-color: var(--bg-active-color);
+    /* border: 2px solid white; */
     margin-top: -8.5px;
+}
+
+canvas{
+    /* background-color: red; */
+    display: none;
+    max-width: 100%;
+    max-height: 65vh;
+    border-radius: var(--border-radius-lg);
+}
+
+.presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter-md);
+}
+
+.presets .btn {
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+    border: 1px solid var(--bg-active-color);
+}
+
+.presets .btn:hover {
+    background-color: var(--bg-active-color);
+    color: var(--text-active-color);
+}
+
+/* media queries */
+
+@media (min-width: 901px) and (max-width: 1200px) {
+
+    main section .left {
+        width: 65%;
+    }
+
+    main section .right {
+        width: 35%;
+    }
+
+    canvas {
+        max-height: 60vh;
+    }
+}
+
+@media (max-width: 600px) {
+
+    main section {
+        flex-direction: column;
+        padding: var(--padding-lg);
+        gap: var(--gutter-md);
+    }
+
+    main section .left,
+    main section .right {
+        width: 100%;
+    }
+
+    main section .top {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main section .bottom {
+        padding: var(--padding-lg);
+        aspect-ratio: 4 / 3;
+    }
+
+    canvas {
+        max-height: 45vh;
+        max-width: 100%;
+    }
+
+    .presets {
+        justify-content: center;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    main section .right {
+        padding: var(--padding-md);
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    main section {
+        flex-direction: column;
+        padding: var(--padding-xl);
+    }
+
+    main section .left,
+    main section .right {
+        width: 100%;
+    }
+
+    canvas {
+        max-height: 55vh;
+    }
+
+    .presets {
+        justify-content: flex-start;
+    }
 }
