@@ -60,6 +60,7 @@ const imginput = document.querySelector("#image-input");
 const canvasCtx = imageCanvas.getContext("2d");
 let file = null;
 let image = null;
+
 const resetButton = document.querySelector("#reset-btn");
 const downloadButton = document.querySelector("#download-btn");
 const presetsContainer = document.querySelector(".presets");
